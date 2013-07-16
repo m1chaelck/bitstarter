@@ -4,10 +4,10 @@ var app = express.createServer(express.logger());
 
 var filename = "index.html"
 
-var mybuffer = new Buffer()
+var mybuffer = new Buffer(fs.readFileSync(filename))
 var mystring;
 
-mybuffer = new Buffer(fs.readFileSync(filename));
+mybuffer = new Buffer();
 mystring = mybuffer.toString();
 
 app.get('/', function(request, response) {
