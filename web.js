@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 
 var filename = "index.html";
 
-var mybuffer = new Buffer();
+var mybuffer = new Buffer('utf8');
 var mystring;
 
 mybuffer = new Buffer(fs.readFileSync(filename));
